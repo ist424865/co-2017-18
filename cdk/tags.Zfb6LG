@@ -1,0 +1,201 @@
+usage	main.cpp	/^static void usage(const char *progname) {$/;"	f	file:
+process_options	main.cpp	/^static void process_options(int argc, char *argv[], std::shared_ptr<cdk::compiler> compiler) {$/;"	f	file:
+language_name	main.cpp	/^static std::string language_name(const std::string &name) {$/;"	f	file:
+main	main.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+__CDK13_YY_FACTORY_H__	yy_factory.h	2;"	d
+cdk	yy_factory.h	/^namespace cdk {$/;"	n
+yy_factory	yy_factory.h	/^  class yy_factory: public basic_factory {$/;"	c	namespace:cdk
+yy_factory	yy_factory.h	/^    yy_factory(const std::string &language) :$/;"	f	class:cdk::yy_factory
+create_parser	yy_factory.h	/^    std::shared_ptr<basic_parser> create_parser() {$/;"	f	class:cdk::yy_factory
+create_scanner	yy_factory.h	/^    std::shared_ptr<basic_scanner> create_scanner() {$/;"	f	class:cdk::yy_factory
+__CDK13_YY_PARSER_H__	yy_parser.h	2;"	d
+yyparse	yy_parser.h	/^extern int yyparse(std::shared_ptr<cdk::compiler> compiler);$/;"	p
+cdk	yy_parser.h	/^namespace cdk {$/;"	n
+yy_parser	yy_parser.h	/^  class yy_parser: public basic_parser {$/;"	c	namespace:cdk
+yy_parser	yy_parser.h	/^    yy_parser(const std::string &language) :$/;"	f	class:cdk::yy_parser
+parse	yy_parser.h	/^    int parse() {$/;"	f	class:cdk::yy_parser
+__CDK13_COMPILER_H__	compiler.h	2;"	d
+cdk	compiler.h	/^namespace cdk {$/;"	n
+basic_node	compiler.h	/^  class basic_node;$/;"	x
+compiler	compiler.h	/^  class compiler: public std::enable_shared_from_this<compiler> {$/;"	c	namespace:cdk
+_name	compiler.h	/^    std::string _name;$/;"	m	class:cdk::compiler
+_extension	compiler.h	/^    std::string _extension;$/;"	m	class:cdk::compiler
+_ifile	compiler.h	/^    std::string _ifile = "";$/;"	m	class:cdk::compiler
+_ofile	compiler.h	/^    std::string _ofile = "";$/;"	m	class:cdk::compiler
+_scanner	compiler.h	/^    std::shared_ptr<basic_scanner> _scanner = nullptr;$/;"	m	class:cdk::compiler
+_parser	compiler.h	/^    std::shared_ptr<basic_parser> _parser = nullptr;$/;"	m	class:cdk::compiler
+_evaluators	compiler.h	/^    std::vector<std::shared_ptr<basic_target>> _evaluators;$/;"	m	class:cdk::compiler
+_ast	compiler.h	/^    basic_node *_ast;$/;"	m	class:cdk::compiler
+_optimize	compiler.h	/^    bool _optimize = false;$/;"	m	class:cdk::compiler
+_debug	compiler.h	/^    bool _debug = true;$/;"	m	class:cdk::compiler
+_errors	compiler.h	/^    int _errors = 0;$/;"	m	class:cdk::compiler
+create	compiler.h	/^    static std::shared_ptr<compiler> create(const std::string &language,$/;"	f	class:cdk::compiler
+compiler	compiler.h	/^    compiler(const std::string &language, std::shared_ptr<basic_scanner> scanner,$/;"	f	class:cdk::compiler
+~compiler	compiler.h	/^    virtual ~compiler() {$/;"	f	class:cdk::compiler
+name	compiler.h	/^    const std::string &name() const {$/;"	f	class:cdk::compiler
+name	compiler.h	/^    void name(const std::string &name) {$/;"	f	class:cdk::compiler
+extension	compiler.h	/^    const std::string &extension() const {$/;"	f	class:cdk::compiler
+extension	compiler.h	/^    void extension(const std::string &extension) {$/;"	f	class:cdk::compiler
+ifile	compiler.h	/^    const std::string &ifile() const {$/;"	f	class:cdk::compiler
+ifile	compiler.h	/^    void ifile(const std::string &ifile) {$/;"	f	class:cdk::compiler
+ofile	compiler.h	/^    const std::string &ofile() const {$/;"	f	class:cdk::compiler
+ofile	compiler.h	/^    void ofile(const std::string &ofile) {$/;"	f	class:cdk::compiler
+istream	compiler.h	/^    std::shared_ptr<std::istream> istream() {$/;"	f	class:cdk::compiler
+ostream	compiler.h	/^    std::shared_ptr<std::ostream> ostream() {$/;"	f	class:cdk::compiler
+ast	compiler.h	/^    basic_node *ast() {$/;"	f	class:cdk::compiler
+ast	compiler.h	/^    void ast(basic_node *ast) {$/;"	f	class:cdk::compiler
+scanner	compiler.h	/^    std::shared_ptr<basic_scanner> scanner() {$/;"	f	class:cdk::compiler
+scanner	compiler.h	/^    void scanner(std::shared_ptr<basic_scanner> scanner) {$/;"	f	class:cdk::compiler
+parser	compiler.h	/^    std::shared_ptr<basic_parser> parser() {$/;"	f	class:cdk::compiler
+parser	compiler.h	/^    void parser(std::shared_ptr<basic_parser> parser) {$/;"	f	class:cdk::compiler
+optimize	compiler.h	/^    bool optimize() const {$/;"	f	class:cdk::compiler
+optimize	compiler.h	/^    void optimize(bool optimize) {$/;"	f	class:cdk::compiler
+debug	compiler.h	/^    bool debug() const {$/;"	f	class:cdk::compiler
+debug	compiler.h	/^    void debug(bool debug) {$/;"	f	class:cdk::compiler
+errors	compiler.h	/^    int errors() const {$/;"	f	class:cdk::compiler
+parse	compiler.h	/^    int parse() {$/;"	f	class:cdk::compiler
+evaluate	compiler.h	/^    bool evaluate() {$/;"	f	class:cdk::compiler
+__CDK13_BASIC_TARGET_H__	basic_target.h	2;"	d
+cdk	basic_target.h	/^namespace cdk {$/;"	n
+compiler	basic_target.h	/^  class compiler;$/;"	x
+ast	basic_target.h	/^  namespace ast {$/;"	n	namespace:cdk
+basic_node	basic_target.h	/^    class basic_node;$/;"	x
+basic_target	basic_target.h	/^  class basic_target {$/;"	c	namespace:cdk
+targets_by_name	basic_target.h	/^    static basic_target *&targets_by_name(const std::string &target) {$/;"	f	class:cdk::basic_target
+get_target_for	basic_target.h	/^    static basic_target *get_target_for(const std::string &target) {$/;"	f	class:cdk::basic_target
+basic_target	basic_target.h	/^    basic_target(const char *target) {$/;"	f	class:cdk::basic_target
+~basic_target	basic_target.h	/^    virtual ~basic_target() {$/;"	f	class:cdk::basic_target
+evaluate	basic_target.h	/^    virtual bool evaluate(std::shared_ptr<compiler>) = 0;$/;"	p	class:cdk::basic_target
+__CDK13_YY_SCANNER_H__	yy_scanner.h	2;"	d
+cdk	yy_scanner.h	/^namespace cdk {$/;"	n
+yy_scanner	yy_scanner.h	/^  class yy_scanner: public basic_scanner {$/;"	c	namespace:cdk
+_lexer	yy_scanner.h	/^    LexerType *_lexer = nullptr;$/;"	m	class:cdk::yy_scanner
+yy_scanner	yy_scanner.h	/^    yy_scanner(const std::string &language) :$/;"	f	class:cdk::yy_scanner
+lexer	yy_scanner.h	/^    LexerType *lexer() {$/;"	f	class:cdk::yy_scanner
+lexer	yy_scanner.h	/^    void lexer(LexerType *lexer) {$/;"	f	class:cdk::yy_scanner
+switch_streams	yy_scanner.h	/^    void switch_streams() {$/;"	f	class:cdk::yy_scanner
+scan	yy_scanner.h	/^    int scan() {$/;"	f	class:cdk::yy_scanner
+lineno	yy_scanner.h	/^    int lineno() const {$/;"	f	class:cdk::yy_scanner
+__CDK13_NULL_DELETER_H__	null_deleter.h	2;"	d
+cdk	null_deleter.h	/^namespace cdk {$/;"	n
+null_deleter	null_deleter.h	/^  struct null_deleter {$/;"	s	namespace:cdk
+operator ()	null_deleter.h	/^    void operator()(void * const) {$/;"	f	struct:cdk::null_deleter
+__CDK13_BASIC_SCANNER_H__	basic_scanner.h	2;"	d
+cdk	basic_scanner.h	/^namespace cdk {$/;"	n
+compiler	basic_scanner.h	/^  class compiler;$/;"	x
+basic_parser	basic_scanner.h	/^  class basic_parser;$/;"	x
+basic_scanner	basic_scanner.h	/^  class basic_scanner {$/;"	c	namespace:cdk
+basic_parser	basic_scanner.h	/^    friend class basic_parser;$/;"	x
+compiler	basic_scanner.h	/^    friend class compiler;$/;"	x
+_language	basic_scanner.h	/^    const std::string _language = "";$/;"	m	class:cdk::basic_scanner
+_compiler	basic_scanner.h	/^    std::shared_ptr<compiler> _compiler = nullptr;$/;"	m	class:cdk::basic_scanner
+_istream	basic_scanner.h	/^    std::shared_ptr<std::istream> _istream = std::shared_ptr<std::istream>(&std::cin,$/;"	m	class:cdk::basic_scanner
+_ostream	basic_scanner.h	/^    std::shared_ptr<std::ostream> _ostream = std::shared_ptr<std::ostream>(&std::cout,$/;"	m	class:cdk::basic_scanner
+_estream	basic_scanner.h	/^    std::shared_ptr<std::ostream> _estream = std::shared_ptr<std::ostream>(&std::cerr,$/;"	m	class:cdk::basic_scanner
+basic_scanner	basic_scanner.h	/^    basic_scanner(const std::string &language) :$/;"	f	class:cdk::basic_scanner
+~basic_scanner	basic_scanner.h	/^    virtual ~basic_scanner() {$/;"	f	class:cdk::basic_scanner
+input_stream	basic_scanner.h	/^    std::shared_ptr<std::istream> input_stream() {$/;"	f	class:cdk::basic_scanner
+input_stream	basic_scanner.h	/^    void input_stream(std::shared_ptr<std::istream> istr) {$/;"	f	class:cdk::basic_scanner
+output_stream	basic_scanner.h	/^    std::shared_ptr<std::ostream> output_stream() {$/;"	f	class:cdk::basic_scanner
+output_stream	basic_scanner.h	/^    void output_stream(std::shared_ptr<std::ostream> ostr) {$/;"	f	class:cdk::basic_scanner
+error_stream	basic_scanner.h	/^    std::shared_ptr<std::ostream> error_stream() {$/;"	f	class:cdk::basic_scanner
+error_stream	basic_scanner.h	/^    void error_stream(std::shared_ptr<std::ostream> estr) {$/;"	f	class:cdk::basic_scanner
+owner	basic_scanner.h	/^    std::shared_ptr<compiler> owner() {$/;"	f	class:cdk::basic_scanner
+set_owner	basic_scanner.h	/^    void set_owner(std::shared_ptr<compiler> compiler) {$/;"	f	class:cdk::basic_scanner
+switch_streams	basic_scanner.h	/^    virtual void switch_streams() = 0;$/;"	p	class:cdk::basic_scanner
+scan	basic_scanner.h	/^    virtual int scan() = 0;$/;"	p	class:cdk::basic_scanner
+lineno	basic_scanner.h	/^    virtual int lineno() const = 0;$/;"	p	class:cdk::basic_scanner
+error	basic_scanner.h	/^    virtual void error(const std::string &message) const {$/;"	f	class:cdk::basic_scanner
+error	basic_scanner.h	/^    virtual void error(const char * const message) const {$/;"	f	class:cdk::basic_scanner
+__CDK13_SYMBOL_TABLE_H__	symbol_table.h	2;"	d
+cdk	symbol_table.h	/^namespace cdk {$/;"	n
+symbol_table	symbol_table.h	/^  class symbol_table {$/;"	c	namespace:cdk
+context_type	symbol_table.h	/^    typedef typename std::map<std::string, std::shared_ptr<Symbol>> context_type;$/;"	t	class:cdk::symbol_table
+_level	symbol_table.h	/^    int _level;$/;"	m	class:cdk::symbol_table
+_current	symbol_table.h	/^    context_type *_current;$/;"	m	class:cdk::symbol_table
+_contexts	symbol_table.h	/^    std::vector<context_type*> _contexts;$/;"	m	class:cdk::symbol_table
+symbol_table	symbol_table.h	/^    symbol_table() :$/;"	f	class:cdk::symbol_table
+~symbol_table	symbol_table.h	/^    virtual ~symbol_table() {$/;"	f	class:cdk::symbol_table
+destroyCurrent	symbol_table.h	/^    void destroyCurrent() {$/;"	f	class:cdk::symbol_table
+push	symbol_table.h	/^    void push() {$/;"	f	class:cdk::symbol_table
+pop	symbol_table.h	/^    void pop() {$/;"	f	class:cdk::symbol_table
+insert	symbol_table.h	/^    bool insert(const std::string &name, std::shared_ptr<Symbol> symbol) {$/;"	f	class:cdk::symbol_table
+replace_local	symbol_table.h	/^    bool replace_local(const std::string &name, std::shared_ptr<Symbol> symbol) {$/;"	f	class:cdk::symbol_table
+replace	symbol_table.h	/^    bool replace(const std::string &name, std::shared_ptr<Symbol> symbol) {$/;"	f	class:cdk::symbol_table
+find_local	symbol_table.h	/^    std::shared_ptr<Symbol> find_local(const std::string &name) {$/;"	f	class:cdk::symbol_table
+find	symbol_table.h	/^    std::shared_ptr<Symbol> find(const std::string &name, size_t from = 0) const {$/;"	f	class:cdk::symbol_table
+__CDK13_BASIC_FACTORY_H__	basic_factory.h	2;"	d
+cdk	basic_factory.h	/^namespace cdk {$/;"	n
+basic_scanner	basic_factory.h	/^  class basic_scanner;$/;"	x
+basic_parser	basic_factory.h	/^  class basic_parser;$/;"	x
+basic_target	basic_factory.h	/^  class basic_target;$/;"	x
+basic_factory	basic_factory.h	/^  class basic_factory {$/;"	c	namespace:cdk
+_language	basic_factory.h	/^    const std::string _language = "";$/;"	m	class:cdk::basic_factory
+factoriesByLanguage	basic_factory.h	/^    static basic_factory *&factoriesByLanguage(const std::string &language) {$/;"	f	class:cdk::basic_factory
+get_implementation	basic_factory.h	/^    static basic_factory *get_implementation(const std::string &language) {$/;"	f	class:cdk::basic_factory
+basic_factory	basic_factory.h	/^    basic_factory(const std::string &language) :$/;"	f	class:cdk::basic_factory
+~basic_factory	basic_factory.h	/^    virtual ~basic_factory() {$/;"	f	class:cdk::basic_factory
+create_scanner	basic_factory.h	/^    virtual std::shared_ptr<basic_scanner> create_scanner() = 0;$/;"	p	class:cdk::basic_factory
+create_parser	basic_factory.h	/^    virtual std::shared_ptr<basic_parser> create_parser() = 0;$/;"	p	class:cdk::basic_factory
+create_compiler	basic_factory.h	/^    virtual std::shared_ptr<compiler> create_compiler() {$/;"	f	class:cdk::basic_factory
+__CDK13_SEMANTICS_EXPRESSIONTYPE_H__	basic_type.h	2;"	d
+basic_type	basic_type.h	/^struct basic_type {$/;"	s
+type	basic_type.h	/^  typedef unsigned long int type;$/;"	t	struct:basic_type
+_size	basic_type.h	/^  size_t _size = 0; \/\/ in bytes$/;"	m	struct:basic_type
+_name	basic_type.h	/^  type _name = TYPE_UNSPEC;$/;"	m	struct:basic_type
+_subtype	basic_type.h	/^  basic_type *_subtype = nullptr;$/;"	m	struct:basic_type
+basic_type	basic_type.h	/^  basic_type() :$/;"	f	struct:basic_type
+basic_type	basic_type.h	/^  basic_type(size_t size, type name) :$/;"	f	struct:basic_type
+size	basic_type.h	/^  size_t size() {$/;"	f	struct:basic_type
+name	basic_type.h	/^  type name() {$/;"	f	struct:basic_type
+subtype	basic_type.h	/^  basic_type *subtype() {$/;"	f	struct:basic_type
+TYPE_UNSPEC	basic_type.h	/^  static const type TYPE_UNSPEC = 0;$/;"	m	struct:basic_type
+TYPE_INT	basic_type.h	/^  static const type TYPE_INT = 1UL << 0;$/;"	m	struct:basic_type
+TYPE_DOUBLE	basic_type.h	/^  static const type TYPE_DOUBLE = 1UL << 1;$/;"	m	struct:basic_type
+TYPE_BOOLEAN	basic_type.h	/^  static const type TYPE_BOOLEAN = 1UL << 2;$/;"	m	struct:basic_type
+TYPE_STRING	basic_type.h	/^  static const type TYPE_STRING = 1UL << 3;$/;"	m	struct:basic_type
+TYPE_POINTER	basic_type.h	/^  static const type TYPE_POINTER = 1UL << 4;$/;"	m	struct:basic_type
+TYPE_STRUCT	basic_type.h	/^  static const type TYPE_STRUCT = 1UL << 5;$/;"	m	struct:basic_type
+TYPE_VOID	basic_type.h	/^  static const type TYPE_VOID = 1UL << 30;$/;"	m	struct:basic_type
+TYPE_ERROR	basic_type.h	/^  static const type TYPE_ERROR = 1UL << 31;$/;"	m	struct:basic_type
+__CDK13_BASIC_PARSER_H__	basic_parser.h	2;"	d
+cdk	basic_parser.h	/^namespace cdk {$/;"	n
+compiler	basic_parser.h	/^  class compiler;$/;"	x
+basic_parser	basic_parser.h	/^  class basic_parser {$/;"	c	namespace:cdk
+_language	basic_parser.h	/^    const std::string _language = "";$/;"	m	class:cdk::basic_parser
+_compiler	basic_parser.h	/^    std::shared_ptr<compiler> _compiler = nullptr;$/;"	m	class:cdk::basic_parser
+_scanner	basic_parser.h	/^    std::shared_ptr<basic_scanner> _scanner = nullptr;$/;"	m	class:cdk::basic_parser
+basic_parser	basic_parser.h	/^    basic_parser(const std::string &language, std::shared_ptr<basic_scanner> scanner) :$/;"	f	class:cdk::basic_parser
+~basic_parser	basic_parser.h	/^    virtual ~basic_parser() {$/;"	f	class:cdk::basic_parser
+owner	basic_parser.h	/^    std::shared_ptr<compiler> owner() {$/;"	f	class:cdk::basic_parser
+compiler	basic_parser.h	/^    friend class compiler;$/;"	x
+set_owner	basic_parser.h	/^    void set_owner(std::shared_ptr<compiler> compiler) {$/;"	f	class:cdk::basic_parser
+scanner	basic_parser.h	/^    std::shared_ptr<basic_scanner> scanner() {$/;"	f	class:cdk::basic_parser
+scanner	basic_parser.h	/^    void scanner(std::shared_ptr<basic_scanner> scanner) {$/;"	f	class:cdk::basic_parser
+parse	basic_parser.h	/^    virtual int parse() = 0;$/;"	p	class:cdk::basic_parser
+implementation_missing	mk-visitor-skel.pl	/^sub implementation_missing {$/;"	s
+mk_code	mk-visitor-skel.pl	/^sub mk_code {$/;"	s
+ROOT	Makefile	/^ROOT = ${HOME}\/compiladores\/root$/;"	m
+LIBNAME	Makefile	/^LIBNAME=cdk$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS=-I. -ggdb -Wall -std=c++11 -pedantic$/;"	m
+INST_INC_DIR	Makefile	/^INST_INC_DIR = $(ROOT)\/usr\/include\/$(LIBNAME)$/;"	m
+INST_BIN_DIR	Makefile	/^INST_BIN_DIR = $(ROOT)\/usr\/bin$/;"	m
+INST_LIB_DIR	Makefile	/^INST_LIB_DIR = $(ROOT)\/usr\/lib$/;"	m
+INST_DOC_DIR	Makefile	/^INST_DOC_DIR = $(ROOT)\/usr\/share\/doc\/packages\/$(LIBNAME)$/;"	m
+SRC_CPP	Makefile	/^SRC_CPP = $(wildcard *.cpp) $(wildcard ast\/*.cpp) \\$/;"	m
+OFILES	Makefile	/^OFILES = $(SRC_CPP:%.cpp=%.o)$/;"	m
+YACC	Makefile	/^YACC=byacc$/;"	m
+LEX	Makefile	/^LEX=flex$/;"	m
+__CDK13_BASIC_AST_VISITOR_H__	basic_ast_visitor.h	2;"	d
+__NODE_DECLARATIONS_ONLY__	basic_ast_visitor.h	7;"	d
+__NODE_DECLARATIONS_ONLY__	basic_ast_visitor.h	9;"	d
+basic_ast_visitor	basic_ast_visitor.h	/^class basic_ast_visitor {$/;"	c
+_os	basic_ast_visitor.h	/^  std::ostream &_os;$/;"	m	class:basic_ast_visitor
+_debug	basic_ast_visitor.h	/^  bool _debug;$/;"	m	class:basic_ast_visitor
+basic_ast_visitor	basic_ast_visitor.h	/^  basic_ast_visitor(std::ostream &os = std::cout, bool debug = false);$/;"	p	class:basic_ast_visitor
+os	basic_ast_visitor.h	/^  inline std::ostream &os() {$/;"	f	class:basic_ast_visitor
+~basic_ast_visitor	basic_ast_visitor.h	/^  virtual ~basic_ast_visitor();$/;"	p	class:basic_ast_visitor
+__IN_VISITOR_HEADER__	basic_ast_visitor.h	50;"	d
+__NODE_DECLARATIONS_ONLY__	basic_ast_visitor.h	51;"	d
+__NODE_DECLARATIONS_ONLY__	basic_ast_visitor.h	53;"	d
+__IN_VISITOR_HEADER__	basic_ast_visitor.h	54;"	d

@@ -1,0 +1,4 @@
+# How to compile simple programs
+./simple examples/ex1.spl
+yasm -felf32 examples/ex1.asm
+ld -m elf_i386 -o examples/ex1 examples/ex1.o -L$HOME/compiladores/root/usr/lib -lrts
